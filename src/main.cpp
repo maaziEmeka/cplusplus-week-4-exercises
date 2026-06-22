@@ -100,6 +100,7 @@ bool TransactionPool::add_transaction(const std::string& txid) {
     //       Hint: std::unordered_set::insert returns {iterator, bool}.
     (void)txid;
     auto result = tx_pool.insert(txid);
+
     return result.second;
 }
 
